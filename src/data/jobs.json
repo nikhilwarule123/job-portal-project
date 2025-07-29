@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Frontend Designer",
+        "company": "Sj Infotech",
+        "location": "Nashik",
+        "tags": [
+            "Senior",
+            "Full Time"
+        ],
+        "salary": "50k - 70k",
+        "description": "We are looking for a skilled Java Developer to design, develop, and maintain enterprise-level applications. You will be responsible for backend logic, database integration, and RESTful API development using Spring Boot and related technologies.",
+        "responsibilities": [
+            "Build reusable UI components",
+            "Write clean, scalable code",
+            "Work with design and backend team"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Python Developer",
+        "company": "Tech Solutions",
+        "location": "Mumbai",
+        "tags": [
+            "Senior",
+            "Full Time",
+            "Remote"
+        ],
+        "salary": "80k - 90k",
+        "description": "Develop and maintain backend services...",
+        "responsibilities": [
+            "Develop backend APIs",
+            "Integrate third-party services",
+            "Collaborate in agile team"
+        ]
+    }
+]
