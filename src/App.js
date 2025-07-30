@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import JobDetails from './pages/JobDetails';
 import Profile from './pages/Profile';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

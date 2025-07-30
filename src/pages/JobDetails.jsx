@@ -26,7 +26,10 @@ function JobDetailPage() {
                 <li>Work closely with frontend and DevOps teams</li>
             </ul>
 
-            <button>Apply Now</button>
+
+            <button className="w-full bg-[#9C8BFF] text-white py-2 mt-6 rounded-xl font-semibold">
+                Apply Now
+            </button>
         </div>
     );
 }

@@ -1,17 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function JobCard({ job }) {
+const JobCard = ({ job }) => {
+    if (!job) return null;
+
     return (
-        <Link to={`/job/${job.id}`}>
-            <div className="bg-[#1A1B2E] p-5 rounded-xl shadow-lg hover:bg-[#292B45] transition duration-200 space-y-2">
-                <h4 className="text-violet-400 text-lg font-semibold">{job.title}</h4>
-                <p className="text-sm text-purple-300">{job.company}</p>
-                <div className="flex justify-between text-sm text-purple-200">
-                    <span>{job.location}</span>
-                    <span className="bg-violet-700 px-2 py-0.5 rounded text-white text-xs">{job.type}</span>
-                </div>
+        <div className="bg-[#292B45] p-5 rounded-2xl shadow-lg text-white space-y-4 w-full max-w-md mx-auto">
+            {/* Title and Company Info */}
+            <div>
+                <h3 className="text-xl font-semibold">{job.title || 'Frontend Designer'}</h3>
+                <p className="text-sm text-gray-300 mt-1">
+                    {job.company || 'SJ Infotech'} / {job.location || 'Nashik'}
+                </p>
             </div>
-        </Link>
+
+            {/* Tags Row */}
+            <div className="flex flex-row justify-start gap-3 mt-2">
+                <button className="bg-[#3B3E5A] text-sm px-4 py-1 rounded-full hover:bg-[#505377]">
+                    {job.tags?.[0] || 'Senior'}
+                </button>
+                <button className="bg-[#3B3E5A] text-sm px-4 py-1 rounded-full hover:bg-[#505377]">
+                    {job.tags?.[1] || 'Full Time'}
+                </button>
+                <button className="bg-[#3B3E5A] text-sm px-4 py-1 rounded-full hover:bg-[#505377]">
+                    {job.salary || '50k - 70k'}
+                </button>
+            </div>
+
+            {/* Footer */}
+            <div className="flex justify-between text-xs text-gray-400 pt-2">
+                <span>{job.time || 'Just now'}</span>
+                <span className="text-white cursor-pointer">☆</span>
+            </div>
+        </div>
     );
-}
+};
+
+export default JobCard;
